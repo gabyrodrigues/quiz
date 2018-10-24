@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://telas placeholder/Sem grid/multiplicação.png" type="Texture" id=1]
+[ext_resource path="res://scenes/nave.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/icon.tscn" type="PackedScene" id=3]
+
+[node name="Node" type="Node"]
+
+[node name="tela placeholder" type="Sprite" parent="." index="0"]
+
+position = Vector2( 457.396, 804.71 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="nave" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 118.966, 1355.49 )
+scale = Vector2( 1, 1 )
+
+[node name="Node2D" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 765.729, 1374.69 )
+
+
