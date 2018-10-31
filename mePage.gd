@@ -1,4 +1,4 @@
-extends Area2D
+extends Node
 
 # class member variables go here, for example:
 # var a = 2
@@ -13,9 +13,3 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
-
-func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.is_pressed():
-		get_tree().change_scene("res://scenes/main.tscn")
-
-	pass

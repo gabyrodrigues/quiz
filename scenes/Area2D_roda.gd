@@ -7,6 +7,7 @@ var speed
 var downSpeed
 
 func _ready():
+	print("raaa: ", get_node("/root/global").ra)
 	canSpin = false
 	speed = 20
 	d =0
@@ -25,8 +26,8 @@ func _process(delta):
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed():
 		randomize()
-#		turns = randi()%1086+366
-		turns = 1086 
+		turns = randi()%1086+366
+		
 		canSpin = true
 
 	pass
@@ -40,7 +41,7 @@ func spin():
 	else:
 		canSpin = false
 		mudarTela()
-#		get_tree().change_scene("res://scenes/Tela_pergunta_me.tscn")
+		get_tree().change_scene("res://scenes/Tela_pergunta_me.tscn")
 
 	print("d:",d)
 	print("speed", speed)
