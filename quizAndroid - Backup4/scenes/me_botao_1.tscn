@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Area2D_me_botao1.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12.721, 206.726 )
+
+[node name="botao1" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="." index="0"]
+
+z_index = 1
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( 26.206, 4.01508 )
+scale = Vector2( 26.8379, 0.215081 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+
