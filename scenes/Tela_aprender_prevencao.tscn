@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://TELAS/menu_aprender6.png" type="Texture" id=1]
+[ext_resource path="res://TELAS/aprendersubtopico2.png" type="Texture" id=1]
 [ext_resource path="res://scenes/botao_aprender_prevencao_assunto.gd" type="Script" id=2]
 [ext_resource path="res://scenes/botao_aprender_assunto.gd" type="Script" id=3]
 [ext_resource path="res://scenes/botao_aprender_prevencao_assunto3.gd" type="Script" id=4]
@@ -12,7 +12,7 @@
 [ext_resource path="res://scenes/fechar_popup_aprender.gd" type="Script" id=10]
 [ext_resource path="res://TELAS/aprender_apagado.png" type="Texture" id=11]
 [ext_resource path="res://TELAS/Icones/assunto_caixa.png" type="Texture" id=12]
-[ext_resource path="res://Voguing.tres" type="DynamicFont" id=13]
+[ext_resource path="res://Noto.tres" type="DynamicFont" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -26,7 +26,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="aprender" type="Sprite" parent="." index="0"]
 
-position = Vector2( 2308.69, 4041.35 )
+position = Vector2( 2308.69, 3948.17 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -39,7 +40,6 @@ _sections_unfolded = [ "Z Index" ]
 
 editor/display_folded = true
 position = Vector2( -0.000152588, -0.000305176 )
-scale = Vector2( 1, 1 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -152,7 +152,7 @@ shape = SubResource( 1 )
 
 [node name="menuButton" parent="." index="2" instance=ExtResource( 8 )]
 
-position = Vector2( 51.5097, 72.5078 )
+position = Vector2( 51.5097, -20.672 )
 scale = Vector2( 1, 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
@@ -236,10 +236,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1585.0
-margin_top = 3231.0
-margin_right = 1732.0
-margin_bottom = 3261.0
+margin_left = 1773.0
+margin_top = 3168.0
+margin_right = 1920.0
+margin_bottom = 3203.0
 rect_scale = Vector2( 10, 10 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -256,7 +256,7 @@ percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
 text = "Agua suja"
-scroll_active = true
+scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
@@ -268,10 +268,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1280.0
-margin_top = 3977.0
-margin_right = 1508.0
-margin_bottom = 4007.0
+margin_left = 1558.0
+margin_top = 3934.0
+margin_right = 1786.0
+margin_bottom = 3975.0
 rect_scale = Vector2( 10, 10 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -287,8 +287,8 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Borra de cafe"
-scroll_active = true
+text = "Borra de café"
+scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
@@ -300,10 +300,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1824.0
-margin_top = 4796.0
-margin_right = 1943.0
-margin_bottom = 4826.0
+margin_left = 1875.0
+margin_top = 4733.0
+margin_right = 1994.0
+margin_bottom = 4763.0
 rect_scale = Vector2( 10, 10 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -318,9 +318,9 @@ bbcode_text = ""
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
-tab_size = 4
-text = "Fumace"
-scroll_active = true
+tab_size = 3
+text = "Fumacê"
+scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
@@ -332,10 +332,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1597.0
-margin_top = 5562.0
-margin_right = 1761.0
-margin_bottom = 5592.0
+margin_left = 1798.0
+margin_top = 5511.0
+margin_right = 1962.0
+margin_bottom = 5541.0
 rect_scale = Vector2( 10, 10 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -352,7 +352,7 @@ percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
 text = "Repelente"
-scroll_active = true
+scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
@@ -364,10 +364,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1509.0
-margin_top = 6360.0
-margin_right = 1690.0
-margin_bottom = 6390.0
+margin_left = 1735.0
+margin_top = 6322.0
+margin_right = 1916.0
+margin_bottom = 6352.0
 rect_scale = Vector2( 10, 10 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -384,7 +384,7 @@ percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
 text = "Testes zika"
-scroll_active = true
+scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
@@ -396,10 +396,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1555.0
-margin_top = 7146.0
-margin_right = 1722.0
-margin_bottom = 7176.0
+margin_left = 1736.0
+margin_top = 7160.0
+margin_right = 1903.0
+margin_bottom = 7190.0
 rect_scale = Vector2( 10, 10 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -416,7 +416,7 @@ percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
 text = "Vitamina B"
-scroll_active = true
+scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false

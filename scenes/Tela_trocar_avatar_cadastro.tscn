@@ -1,0 +1,227 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://TELAS/troca_de_avatares3.png" type="Texture" id=1]
+[ext_resource path="res://scenes/avatar1.gd" type="Script" id=2]
+[ext_resource path="res://scenes/avatar2.gd" type="Script" id=3]
+[ext_resource path="res://scenes/avatar3.gd" type="Script" id=4]
+[ext_resource path="res://scenes/avatar4.gd" type="Script" id=5]
+[ext_resource path="res://scenes/avatar5.gd" type="Script" id=6]
+[ext_resource path="res://scenes/avatar6.gd" type="Script" id=7]
+[ext_resource path="res://scenes/trocar_avatar_ok.gd" type="Script" id=8]
+[ext_resource path="res://scenes/cadastro.gd" type="Script" id=9]
+[ext_resource path="res://TELAS/avatares/avatar1.png" type="Texture" id=10]
+[ext_resource path="res://TELAS/avatares/avatar2.png" type="Texture" id=11]
+[ext_resource path="res://TELAS/avatares/avatar3.png" type="Texture" id=12]
+[ext_resource path="res://TELAS/avatares/avatar4.png" type="Texture" id=13]
+[ext_resource path="res://TELAS/Icones/avatar_selec.png" type="Texture" id=14]
+[ext_resource path="res://scenes/avatar_selec.gd" type="Script" id=15]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 148.094, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="trocar" type="Sprite" parent="." index="0"]
+
+position = Vector2( 456.348, 805.531 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="botoes" type="Node2D" parent="." index="1"]
+
+[node name="avatar1" type="Area2D" parent="botoes" index="0"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/avatar1" index="0"]
+
+position = Vector2( 186.496, 795.959 )
+scale = Vector2( 12.1379, 12.1379 )
+shape = SubResource( 1 )
+
+[node name="avatar2" type="Area2D" parent="botoes" index="1"]
+
+editor/display_folded = true
+position = Vector2( 271.996, 0 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/avatar2" index="0"]
+
+position = Vector2( 186.496, 795.959 )
+scale = Vector2( 12.1379, 12.1379 )
+shape = SubResource( 1 )
+
+[node name="avatar3" type="Area2D" parent="botoes" index="2"]
+
+editor/display_folded = true
+position = Vector2( 543.992, 3.09088 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/avatar3" index="0"]
+
+position = Vector2( 186.496, 795.959 )
+scale = Vector2( 12.1379, 12.1379 )
+shape = SubResource( 1 )
+
+[node name="avatar4" type="Area2D" parent="botoes" index="3"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/avatar4" index="0"]
+
+position = Vector2( 186.496, 1080.32 )
+scale = Vector2( 12.1379, 12.1379 )
+shape = SubResource( 1 )
+
+[node name="avatar5" type="Area2D" parent="botoes" index="4"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 271.996, 0 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/avatar5" index="0"]
+
+position = Vector2( 184.446, 1085.09 )
+scale = Vector2( 12.1379, 12.1379 )
+shape = SubResource( 1 )
+
+[node name="avatar6" type="Area2D" parent="botoes" index="5"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 542.668, 0 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/avatar6" index="0"]
+
+position = Vector2( 184.446, 1085.09 )
+scale = Vector2( 12.1379, 12.1379 )
+shape = SubResource( 1 )
+
+[node name="ok" type="Area2D" parent="botoes" index="6"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/ok" index="0"]
+
+position = Vector2( 661.557, 1496.34 )
+scale = Vector2( 1, 5.04412 )
+shape = SubResource( 2 )
+
+[node name="voltar" type="Area2D" parent="botoes" index="7"]
+
+editor/display_folded = true
+position = Vector2( -406.041, 0 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/voltar" index="0"]
+
+position = Vector2( 661.557, 1496.34 )
+scale = Vector2( 1, 5.04412 )
+shape = SubResource( 2 )
+
+[node name="avatar1" type="Sprite" parent="." index="2"]
+
+position = Vector2( 192.614, 807.205 )
+scale = Vector2( 0.27, 0.27 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="avatar2" type="Sprite" parent="." index="3"]
+
+position = Vector2( 460.654, 798.541 )
+scale = Vector2( 0.27, 0.27 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="avatar3" type="Sprite" parent="." index="4"]
+
+position = Vector2( 730.806, 796.478 )
+scale = Vector2( 0.32, 0.32 )
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="avatar4" type="Sprite" parent="." index="5"]
+
+position = Vector2( 181.636, 1084.61 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 13 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="avatar_selec" type="Sprite" parent="." index="6"]
+
+position = Vector2( 188, 797 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 14 )
+script = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
+
+

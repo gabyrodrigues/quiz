@@ -15,6 +15,10 @@ func _process(delta):
 	
 func _input_event(viewport, event, shape_idx):
 	if (event is InputEventScreenTouch or event is InputEventMouseButton) and event.is_pressed():
+		
+		if get_node("/root/global").sounds == true:
+			get_node("/root/music/btSound").play(0)
+			
 		get_parent().get_node("darkbg").set("visible",true)
 		get_parent().get_node("pop_up_sair").set("visible",true)
 		get_parent().get_parent().get_node("Timer").set("paused",true)

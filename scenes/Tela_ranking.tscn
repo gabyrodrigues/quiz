@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://TELAS/ranking.png" type="Texture" id=1]
+[ext_resource path="res://TELAS/rankingu.png" type="Texture" id=1]
 [ext_resource path="res://scenes/menuButton.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
@@ -8,12 +8,14 @@
 [node name="ranking" type="Sprite" parent="." index="0"]
 
 position = Vector2( 456.348, 805.531 )
-scale = Vector2( 0.2, 0.2 )
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="botoes" type="Node2D" parent="." index="1"]
 
 [node name="menuButton" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 4.20471, 12.6142 )
 
 

@@ -23,6 +23,10 @@ func _input_event(viewport, event, shape_idx):
 		pressed = true
 		print("oheey")	
 	elif(pressed == true):
+		
+		if get_node("/root/global").sounds == true:
+				get_node("/root/music/btSound").play(0)
+		
 		get_tree().change_scene("res://scenes/Tela_roleta.tscn")
 		pressed = false
 	pass	

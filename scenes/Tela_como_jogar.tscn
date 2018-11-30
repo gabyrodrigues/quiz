@@ -1,0 +1,440 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://TELAS/como_jogar_vazio.png" type="Texture" id=1]
+[ext_resource path="res://TELAS/CJ01.png" type="Texture" id=2]
+[ext_resource path="res://TELAS/CJ02.png" type="Texture" id=3]
+[ext_resource path="res://TELAS/CJ03.png" type="Texture" id=4]
+[ext_resource path="res://TELAS/CJ04.png" type="Texture" id=5]
+[ext_resource path="res://scenes/menuButton.tscn" type="PackedScene" id=6]
+
+[sub_resource type="StyleBoxLine" id=2]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+color = Color( 0.266667, 0.364706, 0.4, 1 )
+grow = 1.0
+thickness = 10
+vertical = true
+
+[sub_resource type="StyleBoxLine" id=3]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+color = Color( 0.266667, 0.364706, 0.4, 1 )
+grow = 1.0
+thickness = 10
+vertical = true
+
+[sub_resource type="StyleBoxLine" id=4]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+color = Color( 0.266667, 0.364706, 0.4, 1 )
+grow = 1.0
+thickness = 10
+vertical = true
+
+[sub_resource type="StyleBoxLine" id=5]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+color = Color( 0.658824, 0.85098, 0.956863, 1 )
+grow = 1.0
+thickness = 10
+vertical = true
+
+[sub_resource type="StyleBoxLine" id=6]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+color = Color( 0.658824, 0.85098, 0.956863, 1 )
+grow = 1.0
+thickness = 10
+vertical = true
+
+[sub_resource type="Theme" id=7]
+
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = SubResource( 2 )
+VScrollBar/styles/grabber_highlight = SubResource( 3 )
+VScrollBar/styles/grabber_pressed = SubResource( 4 )
+VScrollBar/styles/scroll = SubResource( 5 )
+VScrollBar/styles/scroll_focus = SubResource( 6 )
+_sections_unfolded = [ "VScrollBar", "VScrollBar/styles" ]
+
+[node name="Node2D" type="Node2D" groups=[
+"scroll",
+]]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="cj" type="Sprite" parent="." index="0"]
+
+position = Vector2( 455.959, 806.856 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Control2" type="Control" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse", "Pause", "Theme", "Visibility" ]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 44.0
+margin_top = 391.0
+margin_right = 861.0
+margin_bottom = 1373.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 7 )
+scroll_horizontal_enabled = false
+scroll_horizontal = 0
+scroll_vertical_enabled = true
+scroll_vertical = 0
+scroll_deadzone = 0
+_sections_unfolded = [ "Scroll" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2/ScrollContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 778.0
+margin_bottom = 3932.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Mouse" ]
+
+[node name="Control" type="Control" parent="Control2/ScrollContainer/VBoxContainer" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 778.0
+margin_bottom = 980.0
+rect_min_size = Vector2( 778, 980 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse", "Rect" ]
+
+[node name="CJ01" type="Sprite" parent="Control2/ScrollContainer/VBoxContainer/Control" index="0"]
+
+position = Vector2( 391.629, 485.081 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Control2" type="Control" parent="Control2/ScrollContainer/VBoxContainer" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 984.0
+margin_right = 778.0
+margin_bottom = 1964.0
+rect_min_size = Vector2( 778, 980 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse", "Rect" ]
+
+[node name="CJ02" type="Sprite" parent="Control2/ScrollContainer/VBoxContainer/Control2" index="0"]
+
+position = Vector2( 387.176, 475.674 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Control3" type="Control" parent="Control2/ScrollContainer/VBoxContainer" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1968.0
+margin_right = 778.0
+margin_bottom = 2948.0
+rect_min_size = Vector2( 778, 980 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse", "Rect" ]
+
+[node name="CJ03" type="Sprite" parent="Control2/ScrollContainer/VBoxContainer/Control3" index="0"]
+
+position = Vector2( 366.565, 487.923 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Control4" type="Control" parent="Control2/ScrollContainer/VBoxContainer" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 2952.0
+margin_right = 778.0
+margin_bottom = 3932.0
+rect_min_size = Vector2( 778, 980 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse", "Rect" ]
+
+[node name="CJ04" type="Sprite" parent="Control2/ScrollContainer/VBoxContainer/Control4" index="0"]
+
+position = Vector2( 370.361, 490.715 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Control2_copia" type="Control" parent="." index="2"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse", "Pause", "Theme", "Visibility" ]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control2_copia" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 44.0
+margin_top = 391.0
+margin_right = 861.0
+margin_bottom = 1373.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 7 )
+scroll_horizontal_enabled = false
+scroll_horizontal = 0
+scroll_vertical_enabled = true
+scroll_vertical = 0
+scroll_deadzone = 0
+_sections_unfolded = [ "Scroll" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2_copia/ScrollContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 778.0
+margin_bottom = 3932.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Mouse" ]
+
+[node name="Control" type="Control" parent="Control2_copia/ScrollContainer/VBoxContainer" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 778.0
+margin_bottom = 980.0
+rect_min_size = Vector2( 778, 980 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="CJ01" type="Sprite" parent="Control2_copia/ScrollContainer/VBoxContainer/Control" index="0"]
+
+position = Vector2( 391.629, 485.081 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Control2" type="Control" parent="Control2_copia/ScrollContainer/VBoxContainer" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 984.0
+margin_right = 778.0
+margin_bottom = 1964.0
+rect_min_size = Vector2( 778, 980 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="CJ02" type="Sprite" parent="Control2_copia/ScrollContainer/VBoxContainer/Control2" index="0"]
+
+position = Vector2( 387.176, 475.674 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Control3" type="Control" parent="Control2_copia/ScrollContainer/VBoxContainer" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1968.0
+margin_right = 778.0
+margin_bottom = 2948.0
+rect_min_size = Vector2( 778, 980 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="CJ03" type="Sprite" parent="Control2_copia/ScrollContainer/VBoxContainer/Control3" index="0"]
+
+position = Vector2( 366.565, 487.923 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Control4" type="Control" parent="Control2_copia/ScrollContainer/VBoxContainer" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 2952.0
+margin_right = 778.0
+margin_bottom = 3932.0
+rect_min_size = Vector2( 778, 980 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="CJ04" type="Sprite" parent="Control2_copia/ScrollContainer/VBoxContainer/Control4" index="0"]
+
+position = Vector2( 370.361, 490.715 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="barragem" type="Control" parent="." index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 824.0
+margin_top = 372.0
+margin_right = 887.0
+margin_bottom = 1544.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse" ]
+
+[node name="menuButton" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 8.23752, 10.6904 )
+z_index = 2
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="botoes" type="Node2D" parent="." index="5"]
+
+

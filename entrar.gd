@@ -7,6 +7,7 @@ extends Area2D
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	get_node("/root/global").loadData()
 	pass
 
 func _process(delta):
@@ -18,6 +19,9 @@ func _process(delta):
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventScreenTouch or (event is InputEventMouseButton and event.is_pressed()):
 		
-		get_tree().change_scene("res://scenes/Tela_roleta.tscn")
+		if get_node("/root/global").sounds == true:
+			get_node("/root/music/btSound").play(0)
+			
+		get_tree().change_scene("res://scenes/Tela_boas_vindas.tscn")
 		
 	pass

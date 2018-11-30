@@ -1,15 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://TELAS/login_temporario.png" type="Texture" id=1]
-[ext_resource path="res://Voguing.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Noto.tres" type="DynamicFont" id=2]
 [ext_resource path="res://entrar.gd" type="Script" id=3]
+[ext_resource path="res://scenes/cadastro.gd" type="Script" id=4]
+[ext_resource path="res://BotaoSound.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 144.283, 10 )
+extents = Vector2( 140.27, 10 )
 
 [node name="Node2D" type="Node2D"]
+
+_sections_unfolded = [ "Transform" ]
 
 [node name="login" type="Sprite" parent="." index="0"]
 
@@ -94,7 +98,7 @@ caret_block_mode = false
 caret_blink = false
 caret_blink_speed = 0.65
 caret_moving_by_right_click = true
-_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_colors" ]
+_sections_unfolded = [ "Caret", "Material", "Rect", "Visibility", "custom_colors", "custom_fonts" ]
 
 [node name="entrar" type="Area2D" parent="." index="3"]
 
@@ -112,5 +116,32 @@ script = ExtResource( 3 )
 position = Vector2( 451.053, 1230.45 )
 scale = Vector2( 1.40414, 4.92484 )
 shape = SubResource( 1 )
+
+[node name="cadastro" type="Area2D" parent="." index="4"]
+
+position = Vector2( 0, 204.918 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cadastro" index="0"]
+
+position = Vector2( 452.581, 1227.67 )
+scale = Vector2( 1.07272, 3.64883 )
+shape = SubResource( 1 )
+
+[node name="btSound" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 5 )
+volume_db = -10.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

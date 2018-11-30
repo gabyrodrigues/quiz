@@ -9,7 +9,8 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	
-	get_parent().get_parent().get_parent().get_node("popup_aprender").set("texture",load("res://TELAS/Aprendizado"+get_parent().get_parent().get_parent().get_parent().get_node("text_pergunta").subject))
+	#get_parent().get_parent().get_parent().get_node("popup_aprender").set("texture",load("res://TELAS/Aprendizado/"+get_parent().get_parent().get_parent().get_parent().get_node("text_pergunta").currentSubject+".png"))
+	#print("res://TELAS/Aprendizado/"+get_parent().get_parent().get_parent().get_parent().get_node("text_pergunta").currentSubject+".png")
 	pass
 
 func _process(delta):
@@ -28,6 +29,11 @@ func _input_event(viewport, event, shape_idx):
 		print("oheey")	
 	elif(pressed == true):
 		#get_tree().change_scene("res://scenes/Tela_aprender.tscn")
+		
+		if get_node("/root/global").sounds == true:
+				get_node("/root/music/btSound").play(0)
+		
+		get_parent().get_parent().get_parent().get_node("popup_aprender").set("texture",load("res://TELAS/Aprendizado/"+get_parent().get_parent().get_parent().get_parent().get_node("text_pergunta").currentSubject+".jpg"))
 		get_parent().get_parent().get_parent().get_node("popup_aprender").set("visible",true)
 		pressed = false
 	pass

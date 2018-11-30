@@ -15,7 +15,12 @@ func _process(delta):
 	
 func _input_event(viewport, event, shape_idx):
 	if (event is InputEventScreenTouch or event is InputEventMouseButton) and event.is_pressed():
+			
 		if(get_node("/root/global").lifes > 0):
+			
+			if get_node("/root/global").sounds == true:
+				get_node("/root/music/btSound").play(0)
+				
 			get_node("/root/global").lifes -= 1
 			set("visible",false)
 			get_tree().change_scene("res://scenes/Tela_roleta.tscn")

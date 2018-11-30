@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/Area2D_menu_Bt.gd" type="Script" id=1]
 [ext_resource path="res://TELAS/menu.png" type="Texture" id=2]
@@ -6,8 +6,10 @@
 [ext_resource path="res://scenes/Area2D_aprender_menu.gd" type="Script" id=4]
 [ext_resource path="res://scenes/Area2D_jogar_menu.gd" type="Script" id=5]
 [ext_resource path="res://scenes/Area2D_ranking_menu.gd" type="Script" id=6]
-[ext_resource path="res://telas placeholder/Sem grid/darkbg.png" type="Texture" id=7]
-[ext_resource path="res://Voguing.tres" type="DynamicFont" id=8]
+[ext_resource path="res://scenes/menu_config.gd" type="Script" id=7]
+[ext_resource path="res://scenes/cj_menu.gd" type="Script" id=8]
+[ext_resource path="res://telas placeholder/Sem grid/darkbg.png" type="Texture" id=9]
+[ext_resource path="res://Voguing.tres" type="DynamicFont" id=10]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -55,7 +57,6 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="fechar" type="Area2D" parent="menu" index="0"]
 
-editor/display_folded = true
 position = Vector2( 978.229, -3338.45 )
 scale = Vector2( 1.38, 1.38 )
 z_index = 2
@@ -154,7 +155,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 4 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="menu/config" index="0"]
@@ -176,7 +177,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 4 )
+script = ExtResource( 8 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="menu/cj" index="0"]
@@ -189,7 +190,7 @@ shape = SubResource( 2 )
 
 visible = false
 position = Vector2( 2265.52, 3990.57 )
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="winPoints" type="RichTextLabel" parent="." index="3"]
@@ -205,11 +206,11 @@ margin_bottom = 1880.0
 rect_scale = Vector2( 10, 10 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
-mouse_filter = 0
+mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = ExtResource( 8 )
+custom_fonts/normal_font = ExtResource( 10 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = ""
@@ -222,6 +223,6 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "Mouse", "Rect", "custom_colors", "custom_fonts" ]
 
 

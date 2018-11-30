@@ -1,14 +1,17 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://TELAS/verdadeiro_falso2.png" type="Texture" id=1]
-[ext_resource path="res://Voguing.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Noto.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scenes/RichTextLabel_perg_vf.gd" type="Script" id=3]
-[ext_resource path="res://telas placeholder/Sem grid/darkbg.png" type="Texture" id=4]
-[ext_resource path="res://scenes/certo.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/me_botao_errou.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/vf_botao_1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/vf_botao_2.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/pula_e_sair_buttons.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Slackey.tres" type="DynamicFont" id=4]
+[ext_resource path="res://telas placeholder/Sem grid/darkbg.png" type="Texture" id=5]
+[ext_resource path="res://scenes/certo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/me_botao_errou.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/vf_botao_1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/vf_botao_2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/pula_e_sair_buttons.tscn" type="PackedScene" id=10]
+[ext_resource path="res://AcertouSound.wav" type="AudioStream" id=11]
+[ext_resource path="res://ErrouSound.wav" type="AudioStream" id=12]
 
 [node name="Node" type="Node"]
 
@@ -30,9 +33,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 76.0
+margin_left = 90.0
 margin_top = 317.0
-margin_right = 457.0
+margin_right = 460.0
 margin_bottom = 469.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -55,7 +58,7 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 script = ExtResource( 3 )
-_sections_unfolded = [ "BBCode", "Rect" ]
+_sections_unfolded = [ "BBCode", "Rect", "custom_colors", "custom_fonts" ]
 
 [node name="timerText" type="RichTextLabel" parent="." index="2"]
 
@@ -63,10 +66,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.06007
 anchor_bottom = 0.0
-margin_left = 73.0
-margin_top = 139.0
-margin_right = 104.336
-margin_bottom = 176.0
+margin_left = 115.0
+margin_top = 132.0
+margin_right = 144.336
+margin_bottom = 189.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -74,7 +77,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.00390625, 0.00186157, 0.00186157, 1 )
 bbcode_enabled = false
 bbcode_text = ""
@@ -87,7 +90,7 @@ scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Mouse", "custom_fonts" ]
+_sections_unfolded = [ "BBCode", "Mouse", "Rect", "custom_fonts" ]
 
 [node name="lifesText" type="RichTextLabel" parent="." index="3"]
 
@@ -96,9 +99,9 @@ anchor_top = 0.0
 anchor_right = 0.06007
 anchor_bottom = 0.0
 margin_left = 370.0
-margin_top = 205.0
-margin_right = 345.336
-margin_bottom = 238.0
+margin_top = 190.0
+margin_right = 344.336
+margin_bottom = 223.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -128,9 +131,9 @@ anchor_top = 0.0
 anchor_right = 0.06007
 anchor_bottom = 0.0
 margin_left = 620.0
-margin_top = 205.0
-margin_right = 595.336
-margin_bottom = 238.0
+margin_top = 190.0
+margin_right = 594.336
+margin_bottom = 223.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -158,22 +161,22 @@ _sections_unfolded = [ "BBCode", "Mouse", "Rect", "custom_fonts" ]
 visible = false
 position = Vector2( 457.396, 807.499 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Timer" type="Timer" parent="." index="6"]
 
 process_mode = 1
 wait_time = 50.0
-one_shot = false
+one_shot = true
 autostart = true
 
-[node name="certo" parent="." index="7" instance=ExtResource( 5 )]
+[node name="certo" parent="." index="7" instance=ExtResource( 6 )]
 
 visible = false
 position = Vector2( 406.387, 910.31 )
 
-[node name="errado" parent="." index="8" instance=ExtResource( 6 )]
+[node name="errado" parent="." index="8" instance=ExtResource( 7 )]
 
 visible = false
 position = Vector2( 395.265, 913.311 )
@@ -184,18 +187,36 @@ z_index = 1
 
 visible = false
 
-[node name="botao1" parent="botoes" index="0" instance=ExtResource( 7 )]
+[node name="botao1" parent="botoes" index="0" instance=ExtResource( 8 )]
 
 position = Vector2( 437.292, 835.245 )
 scale = Vector2( 1.09428, 0.605066 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="botao2" parent="botoes" index="1" instance=ExtResource( 8 )]
+[node name="botao2" parent="botoes" index="1" instance=ExtResource( 9 )]
 
 position = Vector2( 437.292, 1043.08 )
 scale = Vector2( 1.09428, 0.605066 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="pular_e_sair_buttons" parent="." index="10" instance=ExtResource( 9 )]
+[node name="pular_e_sair_buttons" parent="." index="10" instance=ExtResource( 10 )]
+
+[node name="aSound" type="AudioStreamPlayer" parent="." index="11"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="eSound" type="AudioStreamPlayer" parent="." index="12"]
+
+stream = ExtResource( 12 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

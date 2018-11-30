@@ -32,7 +32,6 @@ _sections_unfolded = [ "Z Index" ]
 
 editor/display_folded = true
 position = Vector2( 18.9734, 1574.83 )
-scale = Vector2( 1, 1 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -71,7 +70,6 @@ shape = SubResource( 1 )
 
 editor/display_folded = true
 position = Vector2( 37.9474, 3130.69 )
-scale = Vector2( 1, 1 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0

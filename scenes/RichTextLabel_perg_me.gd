@@ -7,7 +7,8 @@ class MeSet:
 	var answer3 = "[center]"
 	var answer4 = "[center]"
 	var rightOption = 0
-	func _init(q,a1,a2,a3,a4,ro):
+	var subject
+	func _init(q,a1,a2,a3,a4,ro,s):
 		self.question = q
 		
 		self.answer1 += a1
@@ -23,6 +24,8 @@ class MeSet:
 		self.answer4 += "[/center]"
 		
 		self.rightOption = int(ro)
+		
+		self.subject = s
 
 #////////////////////////// END OF CLASS //////////////////////////
 
@@ -55,11 +58,17 @@ var rFile = File.new()
 var rLineCounter = 0
 var rightAns = PoolStringArray()
 
+#subsjects----------------------
+var sFile = File.new()
+var sLineCounter = 0
+var subjects = PoolStringArray()
+
 #MEset variables----------------------
 var meSet = []
 
 #other variables----------------------
 var currentAnswer = 0
+var currentSubject 
 
 func _ready():
 	get_node("/root/global").wait(get_parent().get_node("botoes"))
@@ -105,10 +114,16 @@ func _ready():
 	for i in range(rFile.get_len() - 1):
 		rightAns.insert(rLineCounter,rFile.get_line())
 		rLineCounter+=1
+
+#processing of subjects
+	sFile.open("res://perguntas e respostas/me/assuntos.txt",sFile.READ)
+	for i in range(sFile.get_len() - 1):
+		subjects.insert(sLineCounter,sFile.get_line())
+		sLineCounter+=1
 	
 #processing of ME sets
 	for i in range(qLen):
-		meSet.append(MeSet.new(questions[i],answers1[i],answers2[i],answers3[i],answers4[i],rightAns[i]))
+		meSet.append(MeSet.new(questions[i],answers1[i],answers2[i],answers3[i],answers4[i],rightAns[i],subjects[i]))
 
 #////////////////////////// END OF PROCESSING //////////////////////////	
 		
@@ -130,13 +145,16 @@ func _ready():
 	
 
 func _process(delta):
+	
+	currentSubject = meSet[qIndex].subject
+	
 	set("text",meSet[qIndex].question)
 	get_parent().get_node("text_resposta1").append_bbcode(meSet[qIndex].answer1)
 	get_parent().get_node("text_resposta2").append_bbcode(meSet[qIndex].answer2)
 	get_parent().get_node("text_resposta3").append_bbcode(meSet[qIndex].answer3)
 	get_parent().get_node("text_resposta4").append_bbcode(meSet[qIndex].answer4)
 	
-	get_parent().get_node("timerText").set("text","00:"+String(int(get_parent().get_node("Timer").get("time_left"))))
+	get_parent().get_node("timerText").set("text",String(int(get_parent().get_node("Timer").get("time_left"))))
 	get_parent().get_node("lifesText").set("text",String(get_node("/root/global").lifes))
 	get_parent().get_node("jumpsText").set("text",String(get_node("/root/global").jumps))
 	#get_parent().get_node("hi").set("text", "HELLO")
@@ -149,7 +167,10 @@ func _process(delta):
 
 func checkAnswer():
 	if currentAnswer == int(meSet[qIndex].rightOption):
-
+		
+		if get_node("/root/global").sounds == true:
+			get_parent().get_node("aSound").play(0)
+		
 		get_node("/root/global").ra += 1
 		get_node("/root/global").winStreak += 1
 		get_node("/root/global").loseStreak = 0
@@ -164,6 +185,10 @@ func checkAnswer():
 		
 		
 	else:
+		
+		if get_node("/root/global").sounds == true:
+			get_parent().get_node("eSound").play(0)
+		
 		get_node("/root/global").winStreak = 0
 		get_node("/root/global").loseStreak += 1
 		
@@ -174,6 +199,8 @@ func checkAnswer():
 		
 		get_parent().get_node("botoes").set("visible",false)
 		
+	get_node("/root/global").saveData()
+	
 	pass
 	
 func reiniciate():

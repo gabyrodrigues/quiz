@@ -39,6 +39,10 @@ func _input_event(viewport, event, shape_idx):
 		turns = randi()%1086+726
 		
 		canSpin = true
+		
+		if get_node("/root/global").sounds == true:
+			get_parent().get_parent().get_node("roletaSound").play(0)
+		
 
 	pass
 
@@ -74,9 +78,9 @@ func spin():
 									speed =4
 									if d >= int(9*turns/12):
 										speed =2
-										if d >= int(10*turns/12):
+										if d >= int(11*turns/12):
 											speed =1
-											if d >= int(11*turns/12):
+											if d >= int(11.7*turns/12):
 												speed =0.8
 	pass
 	

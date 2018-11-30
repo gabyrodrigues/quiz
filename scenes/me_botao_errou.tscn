@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 1.74088, 34.726 )
+extents = Vector2( 5.75655, 51.0943 )
 
 [node name="errado" type="Node2D"]
 
@@ -30,7 +30,6 @@ visible = false
 
 [node name="aprender" type="Area2D" parent="errou/botoes" index="0"]
 
-editor/display_folded = true
 position = Vector2( -360, 140 )
 scale = Vector2( 5, 5 )
 input_pickable = true
@@ -45,14 +44,13 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="errou/botoes/aprender" index="0"]
 
-position = Vector2( -136.673, 296.032 )
-scale = Vector2( 26.0859, 0.308638 )
+position = Vector2( -132.601, 302.694 )
+scale = Vector2( 26.0859, 0.917028 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="continuar" type="Area2D" parent="errou/botoes" index="1"]
 
-editor/display_folded = true
 position = Vector2( -360, 140 )
 scale = Vector2( 5, 5 )
 input_pickable = true
@@ -66,8 +64,8 @@ script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="errou/botoes/continuar" index="0"]
 
-position = Vector2( 270.581, 300.104 )
-scale = Vector2( 26.0859, 0.308638 )
+position = Vector2( 274.654, 304.24 )
+scale = Vector2( 26.0859, 0.912104 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 

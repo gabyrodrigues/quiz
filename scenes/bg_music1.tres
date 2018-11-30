@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamOGGVorbis" format=2]
+
+[resource]
+
+resource_name = "bg_music"
+data = PoolByteArray(  )
+loop = false
+loop_offset = 0.0
+_sections_unfolded = [ "Resource" ]
+

@@ -17,6 +17,10 @@ func _process(delta):
 
 func _input_event(viewport, event, shape_idx):
 	if (event is InputEventScreenTouch or event is InputEventMouseButton) and event.is_pressed():
+		
+		if get_node("/root/global").sounds == true:
+				get_node("/root/music/btSound").play(0)
+		
 		print("me")
 		get_tree().change_scene("res://scenes/Tela_pergunta_me.tscn")
 	pass	

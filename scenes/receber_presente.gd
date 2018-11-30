@@ -21,4 +21,11 @@ func _input_event(viewport, event, shape_idx):
 		get_parent().get_parent().get_node("menuButton").set("visible",true)
 		
 		get_parent().set("visible",false)
+		
+		get_parent().get_parent().get_node("botoes/presente").set("visible",false)
+		get_parent().get_parent().get_node("presente").set("texture",load("res://TELAS/Icones/presente_aberto.png"))
+		get_node("/root/global").lifes += 10
+		get_node("/root/global").jumps += 10
+		get_node("/root/global").presentDay = get_node("/root/global").weekDay
+		get_node("/root/global").saveData()
 	pass

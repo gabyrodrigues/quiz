@@ -1,0 +1,313 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://TELAS/Icones/assunto_caixa.png" type="Texture" id=1]
+[ext_resource path="res://TELAS/caixa de perguntas.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxLine" id=2]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+color = Color( 0.719971, 0.03125, 1, 1 )
+grow = 1.0
+thickness = 8
+vertical = true
+
+[sub_resource type="StyleBoxLine" id=3]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+color = Color( 0.717647, 0.027451, 1, 1 )
+grow = 1.0
+thickness = 10
+vertical = true
+
+[sub_resource type="StyleBoxLine" id=4]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+color = Color( 0.298039, 0.298039, 0.298039, 1 )
+grow = 1.0
+thickness = 10
+vertical = true
+
+[sub_resource type="Theme" id=1]
+
+HSlider/icons/grabber = null
+HSlider/icons/grabber_disabled = null
+HSlider/icons/grabber_highlight = null
+HSlider/icons/tick = null
+HSlider/styles/focus = null
+HSlider/styles/grabber_area = null
+HSlider/styles/grabber_disabled = null
+HSlider/styles/grabber_highlight = null
+HSlider/styles/slider = null
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = SubResource( 2 )
+VScrollBar/styles/grabber_highlight = SubResource( 3 )
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = SubResource( 4 )
+VScrollBar/styles/scroll_focus = null
+_sections_unfolded = [ "HSlider/icons", "HSlider/styles", "VScrollBar", "VScrollBar/styles" ]
+
+[node name="Control" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 24.0
+margin_top = 128.0
+margin_right = 893.0
+margin_bottom = 665.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 1 )
+scroll_horizontal_enabled = false
+scroll_horizontal = 0
+scroll_vertical_enabled = true
+scroll_vertical = 0
+scroll_deadzone = 0
+_sections_unfolded = [ "Scroll", "Theme" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 857.0
+margin_bottom = 672.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Control" type="Control" parent="ScrollContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 857.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 857, 165 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="TextureButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 43.0
+margin_top = 8.0
+margin_right = 3828.0
+margin_bottom = 758.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 1 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Control2" type="Control" parent="ScrollContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 169.0
+margin_right = 857.0
+margin_bottom = 334.0
+rect_min_size = Vector2( 857, 165 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="TextureButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/Control2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 43.0
+margin_top = 8.0
+margin_right = 3828.0
+margin_bottom = 758.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 1 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Control3" type="Control" parent="ScrollContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 338.0
+margin_right = 857.0
+margin_bottom = 503.0
+rect_min_size = Vector2( 857, 165 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="TextureButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/Control3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 43.0
+margin_top = 8.0
+margin_right = 3828.0
+margin_bottom = 758.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 1 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Control4" type="Control" parent="ScrollContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 507.0
+margin_right = 857.0
+margin_bottom = 672.0
+rect_min_size = Vector2( 857, 165 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="TextureButton" type="TextureButton" parent="ScrollContainer/VBoxContainer/Control4" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 43.0
+margin_top = 8.0
+margin_right = 3828.0
+margin_bottom = 758.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 1 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Control" type="Control" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -118.0
+margin_top = -105.0
+margin_right = 1074.0
+margin_bottom = 904.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="caixa de perguntas" type="Sprite" parent="." index="2"]
+
+position = Vector2( 462.06, 1453.36 )
+scale = Vector2( 0.221501, 0.440321 )
+z_index = 1
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Z Index" ]
+
+

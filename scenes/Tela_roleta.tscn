@@ -1,19 +1,22 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/controle_tela_roleta.gd" type="Script" id=1]
-[ext_resource path="res://TELAS/roleta2.png" type="Texture" id=2]
-[ext_resource path="res://TELAS/pop_up_coringa.png" type="Texture" id=3]
-[ext_resource path="res://scenes/Area2D_coringa_vf.gd" type="Script" id=4]
-[ext_resource path="res://scenes/Area2D2_coringa_me.gd" type="Script" id=5]
-[ext_resource path="res://scenes/Area2D3_coringa_com.gd" type="Script" id=6]
-[ext_resource path="res://scenes/menuButton.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/Area2D_roda2.gd" type="Script" id=8]
-[ext_resource path="res://scenes/presente.gd" type="Script" id=9]
-[ext_resource path="res://TELAS/Icones/roleta2.png" type="Texture" id=10]
-[ext_resource path="res://TELAS/Icones/mosquitoRoleta.png" type="Texture" id=11]
-[ext_resource path="res://Voguing.tres" type="DynamicFont" id=12]
-[ext_resource path="res://TELAS/pop_up_presente.png" type="Texture" id=13]
-[ext_resource path="res://scenes/receber_presente.gd" type="Script" id=14]
+[ext_resource path="res://TELAS/avatares/tela_avatar1.png" type="Texture" id=2]
+[ext_resource path="res://TELAS/Icones/presente.png" type="Texture" id=3]
+[ext_resource path="res://TELAS/pop_up_coringa.png" type="Texture" id=4]
+[ext_resource path="res://scenes/Area2D_coringa_vf.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Area2D2_coringa_me.gd" type="Script" id=6]
+[ext_resource path="res://scenes/Area2D3_coringa_com.gd" type="Script" id=7]
+[ext_resource path="res://scenes/menuButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Area2D_roda2.gd" type="Script" id=9]
+[ext_resource path="res://scenes/presente.gd" type="Script" id=10]
+[ext_resource path="res://TELAS/roleta_sem_sombra_nem_ponteiro.png" type="Texture" id=11]
+[ext_resource path="res://TELAS/Icones/mosquitoRoleta.png" type="Texture" id=12]
+[ext_resource path="res://Slackey.tres" type="DynamicFont" id=13]
+[ext_resource path="res://Noto.tres" type="DynamicFont" id=14]
+[ext_resource path="res://TELAS/pop_up_presente.png" type="Texture" id=15]
+[ext_resource path="res://scenes/receber_presente.gd" type="Script" id=16]
+[ext_resource path="res://RoletaSound1.wav" type="AudioStream" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -37,12 +40,18 @@ script = ExtResource( 1 )
 [node name="roleta" type="Sprite" parent="." index="0"]
 
 position = Vector2( 453.911, 802.494 )
-scale = Vector2( 0.2, 0.2 )
+scale = Vector2( 0.4, 0.4 )
 z_index = -2
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="coringa" type="Sprite" parent="." index="1" groups=[
+[node name="presente" type="Sprite" parent="." index="1"]
+
+position = Vector2( 776.52, 1477.49 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+
+[node name="coringa" type="Sprite" parent="." index="2" groups=[
 "coringa",
 ]]
 
@@ -50,7 +59,7 @@ visible = false
 position = Vector2( 459.913, 802.437 )
 scale = Vector2( 0.2, 0.2 )
 z_index = 2
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Area2D" type="Area2D" parent="coringa" index="0"]
@@ -64,7 +73,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="coringa/Area2D" index="0"]
@@ -85,7 +94,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="coringa/Area2D2" index="0"]
@@ -106,7 +115,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="coringa/Area2D3" index="0"]
@@ -116,34 +125,16 @@ scale = Vector2( 88.9735, 31.4691 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="menuButton" parent="." index="2" instance=ExtResource( 7 )]
+[node name="menuButton" parent="." index="3" instance=ExtResource( 8 )]
 
 position = Vector2( 6.23712, -0.458557 )
 
-[node name="botoes" type="Node2D" parent="." index="3"]
+[node name="botoes" type="Node2D" parent="." index="4"]
 
 [node name="Area2D" type="Area2D" parent="botoes" index="0"]
 
-position = Vector2( 449.264, 1029.18 )
-scale = Vector2( 0.202928, 0.202928 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 8 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/Area2D" index="0"]
-
-position = Vector2( 5.96069, -5.96191 )
-scale = Vector2( 0.99154, 0.99154 )
-shape = SubResource( 2 )
-
-[node name="presente" type="Area2D" parent="botoes" index="1"]
-
-position = Vector2( 760.414, 1458.06 )
+editor/display_folded = true
+position = Vector2( 452.689, 1053.15 )
 scale = Vector2( 0.202928, 0.202928 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -153,6 +144,27 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 9 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/Area2D" index="0"]
+
+position = Vector2( 25.7922, -93.3013 )
+scale = Vector2( 1.1074, 1.1074 )
+shape = SubResource( 2 )
+
+[node name="presente" type="Area2D" parent="botoes" index="1"]
+
+editor/display_folded = true
+position = Vector2( 760.414, 1458.06 )
+scale = Vector2( 0.202928, 0.202928 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="botoes/presente" index="0"]
 
@@ -160,40 +172,40 @@ position = Vector2( 94.6038, 171.308 )
 scale = Vector2( 0.236714, 21.0492 )
 shape = SubResource( 3 )
 
-[node name="roda2" type="Sprite" parent="." index="4" groups=[
+[node name="roda2" type="Sprite" parent="." index="5" groups=[
 "roda",
 ]]
 
-position = Vector2( 449.264, 1029.18 )
-scale = Vector2( 0.202928, 0.202928 )
+position = Vector2( 452.689, 1039.45 )
+scale = Vector2( 0.43, 0.43 )
 z_index = -1
-texture = ExtResource( 10 )
-_sections_unfolded = [ "Transform", "Z Index" ]
-
-[node name="ponteiro" type="Sprite" parent="." index="5"]
-
-position = Vector2( 455.064, 1020 )
-scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Timer" type="Timer" parent="." index="6"]
+[node name="ponteiro" type="Sprite" parent="." index="6"]
+
+position = Vector2( 458.489, 1030.27 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Timer" type="Timer" parent="." index="7"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = false
 
-[node name="points" type="RichTextLabel" parent="." index="7"]
+[node name="points" type="RichTextLabel" parent="." index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 432.0
-margin_top = 132.0
+margin_top = 115.0
 margin_right = 734.0
-margin_bottom = 162.0
+margin_bottom = 153.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -201,7 +213,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 13 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = ""
@@ -210,13 +222,13 @@ percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
 text = ""
-scroll_active = true
+scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Rect", "Visibility", "custom_colors" ]
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts" ]
 
-[node name="lifes" type="RichTextLabel" parent="." index="8"]
+[node name="lifes" type="RichTextLabel" parent="." index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -233,7 +245,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 14 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = ""
@@ -246,9 +258,9 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Rect", "Visibility", "custom_colors" ]
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts" ]
 
-[node name="jumps" type="RichTextLabel" parent="." index="9"]
+[node name="jumps" type="RichTextLabel" parent="." index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -265,7 +277,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 14 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = ""
@@ -278,14 +290,15 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Rect", "Visibility", "custom_colors" ]
+_sections_unfolded = [ "Rect", "Visibility", "custom_colors", "custom_fonts" ]
 
-[node name="pop_up_presente" type="Sprite" parent="." index="10"]
+[node name="pop_up_presente" type="Sprite" parent="." index="11"]
 
+editor/display_folded = true
 visible = false
 position = Vector2( 455.695, 768.82 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 13 )
+texture = ExtResource( 15 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="receber_presente" type="Area2D" parent="pop_up_presente" index="0"]
@@ -299,12 +312,29 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 14 )
+script = ExtResource( 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pop_up_presente/receber_presente" index="0"]
 
 position = Vector2( 136.211, 122.128 )
 scale = Vector2( 0.638099, 12.3619 )
 shape = SubResource( 3 )
+
+[node name="roletaSound" type="AudioStreamPlayer" parent="." index="12"]
+
+stream = ExtResource( 17 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+_sections_unfolded = [ "Pause" ]
+
+[node name="lifesTimer" type="Timer" parent="." index="13"]
+
+process_mode = 1
+wait_time = 36.0
+one_shot = false
+autostart = false
 
 

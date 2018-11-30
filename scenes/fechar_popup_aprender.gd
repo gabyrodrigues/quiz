@@ -23,4 +23,7 @@ func _input_event(viewport, event, shape_idx):
 		
 		get_parent().get_parent().get_node("menuButton").set("visible",true)
 		get_parent().get_parent().get_node("botoes").set("visible",true)
+		
+		if get_parent().get_parent().has_node("barragem2"):
+			get_parent().get_parent().get_node("barragem2").set("visible",false)
 	pass

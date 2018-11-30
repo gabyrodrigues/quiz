@@ -1,16 +1,19 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://TELAS/pergunta_multiplaEscolhaECompleteAFrase.png" type="Texture" id=1]
-[ext_resource path="res://Voguing.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Noto.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scenes/RichTextLabel_perg_me.gd" type="Script" id=3]
-[ext_resource path="res://telas placeholder/Sem grid/darkbg.png" type="Texture" id=4]
-[ext_resource path="res://scenes/certo.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/me_botao_errou.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/me_botao_1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/me_botao_2.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/me_botao_3.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/me_botao_4.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/pula_e_sair_buttons.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Slackey.tres" type="DynamicFont" id=4]
+[ext_resource path="res://telas placeholder/Sem grid/darkbg.png" type="Texture" id=5]
+[ext_resource path="res://scenes/certo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/me_botao_errou.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/me_botao_1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/me_botao_2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/me_botao_3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/me_botao_4.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/pula_e_sair_buttons.tscn" type="PackedScene" id=12]
+[ext_resource path="res://AcertouSound.wav" type="AudioStream" id=13]
+[ext_resource path="res://ErrouSound.wav" type="AudioStream" id=14]
 
 [node name="Node" type="Node"]
 
@@ -32,9 +35,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 76.0
+margin_left = 90.0
 margin_top = 317.0
-margin_right = 457.0
+margin_right = 460.0
 margin_bottom = 469.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -57,7 +60,7 @@ scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 script = ExtResource( 3 )
-_sections_unfolded = [ "BBCode", "Rect" ]
+_sections_unfolded = [ "BBCode", "Rect", "custom_fonts" ]
 
 [node name="text_resposta1" type="RichTextLabel" parent="." index="2"]
 
@@ -65,10 +68,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 121.0
-margin_top = 739.0
-margin_right = 455.0
-margin_bottom = 767.0
+margin_left = 132.0
+margin_top = 731.0
+margin_right = 466.0
+margin_bottom = 766.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -89,7 +92,7 @@ scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Mouse", "Rect" ]
+_sections_unfolded = [ "BBCode", "Mouse", "Rect", "custom_fonts" ]
 
 [node name="text_resposta2" type="RichTextLabel" parent="." index="3"]
 
@@ -97,10 +100,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 121.0
-margin_top = 912.0
-margin_right = 455.0
-margin_bottom = 940.0
+margin_left = 132.0
+margin_top = 905.0
+margin_right = 466.0
+margin_bottom = 937.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -121,7 +124,7 @@ scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Mouse", "Rect" ]
+_sections_unfolded = [ "Mouse", "Rect", "custom_fonts" ]
 
 [node name="text_resposta3" type="RichTextLabel" parent="." index="4"]
 
@@ -129,9 +132,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 121.0
-margin_top = 1086.0
-margin_right = 455.0
+margin_left = 132.0
+margin_top = 1080.0
+margin_right = 466.0
 margin_bottom = 1114.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
@@ -153,7 +156,7 @@ scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Mouse", "Rect" ]
+_sections_unfolded = [ "Mouse", "Rect", "custom_fonts" ]
 
 [node name="text_resposta4" type="RichTextLabel" parent="." index="5"]
 
@@ -161,10 +164,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 121.0
-margin_top = 1257.0
-margin_right = 455.0
-margin_bottom = 1285.0
+margin_left = 132.0
+margin_top = 1255.0
+margin_right = 466.0
+margin_bottom = 1289.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -185,7 +188,7 @@ scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Mouse", "Rect" ]
+_sections_unfolded = [ "BBCode", "Mouse", "Rect", "custom_fonts" ]
 
 [node name="timerText" type="RichTextLabel" parent="." index="6"]
 
@@ -193,10 +196,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.06007
 anchor_bottom = 0.0
-margin_left = 77.0
-margin_top = 138.0
-margin_right = 109.336
-margin_bottom = 175.0
+margin_left = 115.0
+margin_top = 132.0
+margin_right = 145.336
+margin_bottom = 191.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -204,7 +207,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0.00390625, 0.00186157, 0.00186157, 1 )
 bbcode_enabled = false
 bbcode_text = ""
@@ -217,7 +220,7 @@ scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Mouse", "custom_fonts" ]
+_sections_unfolded = [ "BBCode", "Mouse", "Rect", "custom_fonts" ]
 
 [node name="lifesText" type="RichTextLabel" parent="." index="7"]
 
@@ -226,9 +229,9 @@ anchor_top = 0.0
 anchor_right = 0.06007
 anchor_bottom = 0.0
 margin_left = 370.0
-margin_top = 205.0
-margin_right = 345.336
-margin_bottom = 238.0
+margin_top = 190.0
+margin_right = 344.336
+margin_bottom = 223.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -258,9 +261,9 @@ anchor_top = 0.0
 anchor_right = 0.06007
 anchor_bottom = 0.0
 margin_left = 620.0
-margin_top = 205.0
-margin_right = 595.336
-margin_bottom = 238.0
+margin_top = 190.0
+margin_right = 594.336
+margin_bottom = 223.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -288,22 +291,22 @@ _sections_unfolded = [ "BBCode", "Mouse", "Rect", "custom_fonts" ]
 visible = false
 position = Vector2( 457.396, 807.499 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Timer" type="Timer" parent="." index="10"]
 
 process_mode = 1
 wait_time = 50.0
-one_shot = false
+one_shot = true
 autostart = true
 
-[node name="certo" parent="." index="11" instance=ExtResource( 5 )]
+[node name="certo" parent="." index="11" instance=ExtResource( 6 )]
 
 visible = false
 position = Vector2( 409.129, 902.682 )
 
-[node name="errado" parent="." index="12" instance=ExtResource( 6 )]
+[node name="errado" parent="." index="12" instance=ExtResource( 7 )]
 
 visible = false
 position = Vector2( 388.163, 922.103 )
@@ -315,31 +318,49 @@ z_index = 1
 editor/display_folded = true
 visible = false
 
-[node name="botao1" parent="botoes" index="0" instance=ExtResource( 7 )]
+[node name="botao1" parent="botoes" index="0" instance=ExtResource( 8 )]
 
 position = Vector2( 434.77, 760.868 )
 scale = Vector2( 1.09428, 0.605066 )
 z_index = 1
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="botao2" parent="botoes" index="1" instance=ExtResource( 8 )]
+[node name="botao2" parent="botoes" index="1" instance=ExtResource( 9 )]
 
 position = Vector2( 441.65, 938.571 )
 scale = Vector2( 1.09428, 0.605066 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="botao3" parent="botoes" index="2" instance=ExtResource( 9 )]
+[node name="botao3" parent="botoes" index="2" instance=ExtResource( 10 )]
 
 position = Vector2( 436.51, 1108 )
 scale = Vector2( 1.09428, 0.605066 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="botao4" parent="botoes" index="3" instance=ExtResource( 10 )]
+[node name="botao4" parent="botoes" index="3" instance=ExtResource( 11 )]
 
 position = Vector2( 434.77, 1281.38 )
 scale = Vector2( 1.09428, 0.605066 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="pular_e_sair_buttons" parent="." index="14" instance=ExtResource( 11 )]
+[node name="pular_e_sair_buttons" parent="." index="14" instance=ExtResource( 12 )]
+
+[node name="aSound" type="AudioStreamPlayer" parent="." index="15"]
+
+stream = ExtResource( 13 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="eSound" type="AudioStreamPlayer" parent="." index="16"]
+
+stream = ExtResource( 14 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 
